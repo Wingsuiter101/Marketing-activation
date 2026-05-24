@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #07030F;
+  --background-secondary: #0B0618;
+  --foreground: #FFFFFF;
+  --foreground-muted: #D8D4E8;
+  
+  --dgo-violet: #6D28D9;
+  --dgo-pink: #EC4899;
+  --dgo-orange: #F97316;
+  --dgo-red: #EF4444;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  
+  --color-dgo-violet: var(--dgo-violet);
+  --color-dgo-pink: var(--dgo-pink);
+  --color-dgo-orange: var(--dgo-orange);
+  --color-dgo-red: var(--dgo-red);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for webkit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--background-secondary);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dgo-violet);
+}
+
+/* Hide scrollbar for clean deck look */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
