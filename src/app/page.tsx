@@ -6,6 +6,7 @@ import { PhaseTimeline } from "@/components/PhaseTimeline";
 import { RecommendationCard } from "@/components/RecommendationCard";
 import { ProgressRail } from "@/components/ProgressRail";
 import { GradientOrb } from "@/components/GradientOrb";
+import { assetPath } from "@/lib/asset";
 import Image from "next/image";
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image 
-            src="/fifa-world-cup-2026-1920x1080.png" 
+            src={assetPath("/fifa-world-cup-2026-1920x1080.png")} 
             alt="FIFA World Cup 2026 Background" 
             fill
             className="object-cover opacity-30 mix-blend-luminosity"
@@ -40,7 +41,7 @@ export default function Home() {
         <div className="text-center space-y-10 max-w-5xl mx-auto relative z-10">
           <div className="flex justify-center mb-8">
             <Image 
-              src="/Himalaya-Dgo-Lockup.png" 
+              src={assetPath("/Himalaya-Dgo-Lockup.png")} 
               alt="Himalaya Sports and DGO Lockup" 
               width={600} 
               height={180} 
@@ -110,7 +111,7 @@ export default function Home() {
           />
 
           <Image 
-            src="/Himalaya-Dgo-Lockup.png" 
+            src={assetPath("/Himalaya-Dgo-Lockup.png")} 
             alt="Himalaya Sports and DGO Lockup" 
             width={500} 
             height={150} 
